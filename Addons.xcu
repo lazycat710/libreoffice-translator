@@ -1,0 +1,53 @@
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Addons" oor:package="org.openoffice.Office">
+  <node oor:name="AddonUI">
+    <node oor:name="OfficeMenuBar">
+      <node oor:name="org.extension.translator.menubar" oor:op="replace">
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="en-US">Translator</value>
+          <value xml:lang="zh-CN">翻译工具</value>
+        </prop>
+        <prop oor:name="Context" oor:type="xs:string">
+          <value>com.sun.star.text.GlobalDocument,com.sun.star.text.TextDocument,com.sun.star.text.WebDocument</value>
+        </prop>
+        <node oor:name="Submenu">
+          <node oor:name="M1" oor:op="replace">
+            <prop oor:name="Title">
+              <value xml:lang="en-US">Translate Selection</value>
+              <value xml:lang="zh-CN">翻译选中内容</value>
+            </prop>
+            <prop oor:name="URL">
+              <value>service:org.extension.translator.do?TranslateSelection</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string">
+              <value>_self</value>
+            </prop>
+          </node>
+           <node oor:name="M2" oor:op="replace">
+            <prop oor:name="Title">
+              <value xml:lang="en-US">Translate Entire Document</value>
+              <value xml:lang="zh-CN">翻译全文</value>
+            </prop>
+            <prop oor:name="URL">
+              <value>service:org.extension.translator.do?TranslateDocument</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string">
+              <value>_self</value>
+            </prop>
+          </node>
+            <node oor:name="M3" oor:op="replace">
+            <prop oor:name="Title">
+              <value xml:lang="en-US">Settings</value>
+              <value xml:lang="zh-CN">设置</value>
+            </prop>
+            <prop oor:name="URL">
+              <value>service:org.extension.translator.do?settings</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string">
+              <value>_self</value>
+            </prop>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</oor:component-data>

@@ -1,0 +1,6 @@
+*.rar
+*.log
+*.tmp
+__pycache__/
+*.pyc
+.DS_Store
